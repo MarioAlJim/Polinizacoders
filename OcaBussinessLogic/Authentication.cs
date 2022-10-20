@@ -10,22 +10,19 @@ namespace OcaBussinessLogic
         {
         }
 
-        public Boolean login(string userName, string password)
+        public Users login(string userName, string password)
         {
-            var users = 0;
-            Boolean login = false;
+            Users users;
             using (var context = new OcaDBEntities())
             {
-                users = (from Users in context.Users
+                users = (Users)(from Users in context.Users
                          where Users.Nickname == userName && Users.Password == password
-                         select Users).Count();
+                         select Users);
             }
-            if (users > 0)
-            {
-                login = true;
-            }
-            return login;
+            return users;
         }
+
+
 
     }
 }

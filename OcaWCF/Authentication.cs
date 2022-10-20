@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using OcaBussinessLogic;
 
 namespace OcaWCF
 {
@@ -12,7 +13,7 @@ namespace OcaWCF
     {
         public bool login(string userName, string password)
         {
-            OcaBussinessLogic.Authentication authentication = new OcaBussinessLogic.Authentication();
+            Authentication authentication = new Authentication();
             Boolean sucess = false;
             sucess= authentication.login(userName, password);
             return sucess
