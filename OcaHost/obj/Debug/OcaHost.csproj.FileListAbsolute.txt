@@ -10,15 +10,3 @@ C:\Users\Mario Jimenez\source\repos\OcaHost\obj\Debug\OcaHost.csproj.CoreCompile
 C:\Users\Mario Jimenez\source\repos\OcaHost\obj\Debug\OcaHost.csproj.CopyComplete
 C:\Users\Mario Jimenez\source\repos\OcaHost\obj\Debug\OcaHost.exe
 C:\Users\Mario Jimenez\source\repos\OcaHost\obj\Debug\OcaHost.pdb
-C:\Users\Mario Jimenez\source\repos\OcaHost\bin\Debug\OcaBussinessLogic.dll
-C:\Users\Mario Jimenez\source\repos\OcaHost\bin\Debug\OcaDataAccess.dll
-C:\Users\Mario Jimenez\source\repos\OcaHost\bin\Debug\EntityFramework.dll
-C:\Users\Mario Jimenez\source\repos\OcaHost\bin\Debug\OcaBussinessLogic.pdb
-C:\Users\Mario Jimenez\source\repos\OcaHost\bin\Debug\OcaBussinessLogic.dll.config
-C:\Users\Mario Jimenez\source\repos\OcaHost\bin\Debug\OcaDataAccess.pdb
-C:\Users\Mario Jimenez\source\repos\OcaHost\bin\Debug\OcaDataAccess.dll.config
-C:\Users\Mario Jimenez\source\repos\OcaHost\bin\Debug\EntityFramework.xml
-C:\Users\Mario Jimenez\source\repos\OcaHost\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Mario Jimenez\source\repos\OcaHost\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Mario Jimenez\source\repos\OcaGame\OcaHost\obj\Debug\OcaHost.exe
-C:\Users\Mario Jimenez\source\repos\OcaGame\OcaHost\obj\Debug\OcaHost.pdb
