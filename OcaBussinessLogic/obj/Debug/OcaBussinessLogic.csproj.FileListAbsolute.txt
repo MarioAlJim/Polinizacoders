@@ -13,3 +13,5 @@ C:\Users\Mario Jimenez\source\repos\OcaBussinessLogic\obj\Debug\OcaBussinessLogi
 C:\Users\Mario Jimenez\source\repos\OcaBussinessLogic\obj\Debug\OcaBussinessLogic.csproj.CopyComplete
 C:\Users\Mario Jimenez\source\repos\OcaBussinessLogic\obj\Debug\OcaBussinessLogic.dll
 C:\Users\Mario Jimenez\source\repos\OcaBussinessLogic\obj\Debug\OcaBussinessLogic.pdb
+C:\Users\Mario Jimenez\source\repos\OcaGame\OcaBussinessLogic\obj\Debug\OcaBussinessLogic.dll
+C:\Users\Mario Jimenez\source\repos\OcaGame\OcaBussinessLogic\obj\Debug\OcaBussinessLogic.pdb
