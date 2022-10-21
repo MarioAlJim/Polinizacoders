@@ -30,3 +30,19 @@ C:\Users\Mario Jimenez\source\repos\MessageService\OcaWCF\obj\Debug\OcaWCF.cspro
 C:\Users\Mario Jimenez\source\repos\MessageService\OcaWCF\obj\Debug\OcaWCF.csproj.CopyComplete
 C:\Users\Mario Jimenez\source\repos\MessageService\OcaWCF\obj\Debug\OcaWCF.dll
 C:\Users\Mario Jimenez\source\repos\MessageService\OcaWCF\obj\Debug\OcaWCF.pdb
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaWCF\bin\Debug\OcaWCF.dll.config
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaWCF\bin\Debug\OcaWCF.dll
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaWCF\bin\Debug\OcaWCF.pdb
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaWCF\bin\Debug\OcaBussinessLogic.dll
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaWCF\bin\Debug\OcaDataAccess.dll
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaWCF\bin\Debug\EntityFramework.dll
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaWCF\bin\Debug\OcaBussinessLogic.pdb
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaWCF\bin\Debug\OcaBussinessLogic.dll.config
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaWCF\bin\Debug\OcaDataAccess.pdb
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaWCF\bin\Debug\OcaDataAccess.dll.config
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaWCF\bin\Debug\EntityFramework.xml
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaWCF\obj\Debug\OcaWCF.csproj.AssemblyReference.cache
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaWCF\obj\Debug\OcaWCF.csproj.CoreCompileInputs.cache
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaWCF\obj\Debug\OcaWCF.csproj.CopyComplete
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaWCF\obj\Debug\OcaWCF.dll
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaWCF\obj\Debug\OcaWCF.pdb

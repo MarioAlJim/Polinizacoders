@@ -4,7 +4,15 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="OcaDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="OcaDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Friends">
+          <Key>
+            <PropertyRef Name="IdFriend" />
+          </Key>
+          <Property Name="IdFriend" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdUser" Type="int" />
+          <Property Name="IdUserFriend" Type="int" />
+        </EntityType>
         <EntityType Name="People">
           <Key>
             <PropertyRef Name="IdPerson" />
@@ -15,6 +23,14 @@
           <Property Name="Email" Type="nvarchar(max)" />
           <Property Name="PhoneNumber" Type="int" />
           <Property Name="IdUser" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Reports">
+          <Key>
+            <PropertyRef Name="IdReport" />
+          </Key>
+          <Property Name="IdReport" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="typeReport" Type="text" />
+          <Property Name="IdUser" Type="int" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -27,6 +43,46 @@
           <Property Name="Experience" Type="int" />
           <Property Name="Online" Type="bit" />
         </EntityType>
+        <Association Name="FK__Friends__IdUser__440B1D61">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Friends" Type="Self.Friends" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IdUser" />
+            </Principal>
+            <Dependent Role="Friends">
+              <PropertyRef Name="IdUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Friends__IdUserF__44FF419A">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Friends" Type="Self.Friends" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IdUser" />
+            </Principal>
+            <Dependent Role="Friends">
+              <PropertyRef Name="IdUserFriend" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reports__IdUser__3E52440B">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Reports" Type="Self.Reports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IdUser" />
+            </Principal>
+            <Dependent Role="Reports">
+              <PropertyRef Name="IdUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_dbo_People_dbo_Users_IdUser">
           <End Role="Users" Type="Self.Users" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -42,15 +98,28 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="OcaDBModelStoreContainer">
+          <EntitySet Name="Friends" EntityType="Self.Friends" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="People" EntityType="Self.People" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Reports" EntityType="Self.Reports" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Friends__IdUser__440B1D61" Association="Self.FK__Friends__IdUser__440B1D61">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Friends" EntitySet="Friends" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Friends__IdUserF__44FF419A" Association="Self.FK__Friends__IdUserF__44FF419A">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Friends" EntitySet="Friends" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reports__IdUser__3E52440B" Association="Self.FK__Reports__IdUser__3E52440B">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Reports" EntitySet="Reports" />
+          </AssociationSet>
           <AssociationSet Name="FK_dbo_People_dbo_Users_IdUser" Association="Self.FK_dbo_People_dbo_Users_IdUser">
             <End Role="Users" EntitySet="Users" />
             <End Role="People" EntitySet="People" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="OcaDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -77,6 +146,9 @@
           <Property Name="Experience" Type="Int32" />
           <Property Name="Online" Type="Boolean" />
           <NavigationProperty Name="People" Relationship="Self.FK_dbo_People_dbo_Users_IdUser" FromRole="Users" ToRole="People" />
+          <NavigationProperty Name="Reports" Relationship="OcaDBModel.FK__Reports__IdUser__3E52440B" FromRole="Users" ToRole="Reports" />
+          <NavigationProperty Name="Friends" Relationship="OcaDBModel.FK__Friends__IdUser__440B1D61" FromRole="Users" ToRole="Friend" />
+          <NavigationProperty Name="Friends1" Relationship="OcaDBModel.FK__Friends__IdUserF__44FF419A" FromRole="Users" ToRole="Friend" />
         </EntityType>
         <Association Name="FK_dbo_People_dbo_Users_IdUser">
           <End Role="Users" Type="Self.Users" Multiplicity="1">
@@ -99,7 +171,80 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="People" EntitySet="People" />
           </AssociationSet>
+          <EntitySet Name="Reports" EntityType="OcaDBModel.Reports" />
+          <AssociationSet Name="FK__Reports__IdUser__3E52440B" Association="OcaDBModel.FK__Reports__IdUser__3E52440B">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Reports" EntitySet="Reports" />
+          </AssociationSet>
+          <EntitySet Name="Friends" EntityType="OcaDBModel.Friend" />
+          <AssociationSet Name="FK__Friends__IdUser__440B1D61" Association="OcaDBModel.FK__Friends__IdUser__440B1D61">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Friend" EntitySet="Friends" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Friends__IdUserF__44FF419A" Association="OcaDBModel.FK__Friends__IdUserF__44FF419A">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Friend" EntitySet="Friends" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Reports">
+          <Key>
+            <PropertyRef Name="IdReport" />
+          </Key>
+          <Property Name="IdReport" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="typeReport" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IdUser" Type="Int32" />
+          <NavigationProperty Name="Users" Relationship="OcaDBModel.FK__Reports__IdUser__3E52440B" FromRole="Reports" ToRole="Users" />
+        </EntityType>
+        <Association Name="FK__Reports__IdUser__3E52440B">
+          <End Type="OcaDBModel.Users" Role="Users" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="OcaDBModel.Reports" Role="Reports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IdUser" />
+            </Principal>
+            <Dependent Role="Reports">
+              <PropertyRef Name="IdUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Friend">
+          <Key>
+            <PropertyRef Name="IdFriend" />
+          </Key>
+          <Property Name="IdFriend" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdUser" Type="Int32" />
+          <Property Name="IdUserFriend" Type="Int32" />
+          <NavigationProperty Name="User" Relationship="OcaDBModel.FK__Friends__IdUser__440B1D61" FromRole="Friend" ToRole="Users" />
+          <NavigationProperty Name="User1" Relationship="OcaDBModel.FK__Friends__IdUserF__44FF419A" FromRole="Friend" ToRole="Users" />
+        </EntityType>
+        <Association Name="FK__Friends__IdUser__440B1D61">
+          <End Type="OcaDBModel.Users" Role="Users" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="OcaDBModel.Friend" Role="Friend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IdUser" />
+            </Principal>
+            <Dependent Role="Friend">
+              <PropertyRef Name="IdUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Friends__IdUserF__44FF419A">
+          <End Type="OcaDBModel.Users" Role="Users" Multiplicity="0..1" />
+          <End Type="OcaDBModel.Friend" Role="Friend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IdUser" />
+            </Principal>
+            <Dependent Role="Friend">
+              <PropertyRef Name="IdUserFriend" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -130,6 +275,24 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Reports">
+            <EntityTypeMapping TypeName="OcaDBModel.Reports">
+              <MappingFragment StoreEntitySet="Reports">
+                <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+                <ScalarProperty Name="typeReport" ColumnName="typeReport" />
+                <ScalarProperty Name="IdReport" ColumnName="IdReport" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Friends">
+            <EntityTypeMapping TypeName="OcaDBModel.Friend">
+              <MappingFragment StoreEntitySet="Friends">
+                <ScalarProperty Name="IdUserFriend" ColumnName="IdUserFriend" />
+                <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+                <ScalarProperty Name="IdFriend" ColumnName="IdFriend" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -144,7 +307,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />

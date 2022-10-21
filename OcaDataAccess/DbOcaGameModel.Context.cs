@@ -27,5 +27,7 @@ namespace OcaDataAccess
     
         public virtual DbSet<People> People { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Reports> Reports { get; set; }
+        public virtual DbSet<Friend> Friends { get; set; }
     }
 }

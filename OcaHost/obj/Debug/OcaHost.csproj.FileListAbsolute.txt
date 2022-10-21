@@ -10,3 +10,15 @@ C:\Users\Mario Jimenez\source\repos\OcaHost\obj\Debug\OcaHost.csproj.CoreCompile
 C:\Users\Mario Jimenez\source\repos\OcaHost\obj\Debug\OcaHost.csproj.CopyComplete
 C:\Users\Mario Jimenez\source\repos\OcaHost\obj\Debug\OcaHost.exe
 C:\Users\Mario Jimenez\source\repos\OcaHost\obj\Debug\OcaHost.pdb
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\bin\Debug\OcaHost.exe.config
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\bin\Debug\OcaHost.exe
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\bin\Debug\OcaHost.pdb
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\bin\Debug\OcaWCF.dll
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\bin\Debug\OcaWCF.pdb
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\bin\Debug\OcaWCF.dll.config
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\obj\Debug\OcaHost.csproj.AssemblyReference.cache
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\obj\Debug\OcaHost.csproj.SuggestedBindingRedirects.cache
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\obj\Debug\OcaHost.csproj.CoreCompileInputs.cache
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\obj\Debug\OcaHost.csproj.CopyComplete
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\obj\Debug\OcaHost.exe
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\obj\Debug\OcaHost.pdb
