@@ -22,3 +22,7 @@ C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHo
 C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\obj\Debug\OcaHost.csproj.CopyComplete
 C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\obj\Debug\OcaHost.exe
 C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\obj\Debug\OcaHost.pdb
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\bin\Debug\EntityFramework.dll
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\bin\Debug\EntityFramework.xml
+C:\Users\Mario Jimenez\Desktop\Semestre 5\Tecnologias\Proyecto-Tecnologias\OcaHost\bin\Debug\EntityFramework.SqlServer.xml

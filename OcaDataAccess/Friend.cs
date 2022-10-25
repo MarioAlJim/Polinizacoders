@@ -18,7 +18,7 @@ namespace OcaDataAccess
         public Nullable<int> IdUser { get; set; }
         public Nullable<int> IdUserFriend { get; set; }
     
-        public virtual Users User { get; set; }
-        public virtual Users User1 { get; set; }
+        public virtual User User { get; set; }
+        public virtual User User1 { get; set; }
     }
 }
