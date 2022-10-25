@@ -13,10 +13,10 @@ namespace OcaDataAccess
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class OcaDBEntities : DbContext
+    public partial class OcaEntities : DbContext
     {
-        public OcaDBEntities()
-            : base("name=OcaDBEntities")
+        public OcaEntities()
+            : base("name=OcaEntities")
         {
         }
     

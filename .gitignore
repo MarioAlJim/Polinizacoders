@@ -1,0 +1,5 @@
+
+*.config
+OcaBussinessLogic/App.config
+OcaBussinessLogic/Authentication.cs
+OcaDataAccess/Properties/DataSources/Friend.datasource
