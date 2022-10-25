@@ -10,12 +10,12 @@ namespace OcaBussinessLogic
         {
         }
 
-        public Users login(string userName, string password)
+        public User login(string userName, string password)
         {
-            Users users;
-            using (var context = new OcaDBEntities())
+            User users;
+            using (var context = new OcaEntities())
             {
-                users = (Users)(from Users in context.Users
+                users = (User)(from Users in context.Users
                          where Users.Nickname == userName && Users.Password == password
                          select Users);
             }

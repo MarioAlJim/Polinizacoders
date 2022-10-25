@@ -14,13 +14,13 @@ namespace OcaBussinessLogic
         {
             Console.WriteLine("*** Add User Starts ***");
 
-            using (var context = new OcaDBEntities())
+            using (var context = new OcaEntities())
             {
                 //Log DB commands to console
                 context.Database.Log = Console.WriteLine;
 
                 //Add a new student and address
-                var newStudent = context.Users.Add(new Users() { Nickname = nickname, Password = password });
+                var newStudent = context.Users.Add(new User() { Nickname = nickname, Password = password });
                 context.SaveChanges(); // Executes Insert command
 
             }
