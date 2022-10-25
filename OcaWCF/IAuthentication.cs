@@ -13,6 +13,10 @@ namespace OcaWCF
     {
         [OperationContract]
         Boolean login (string userName, string password);
+        [OperationContract]
+        Boolean SignUp(string nickname, string password);
+
+    
 
         // TODO: agregue aquí sus operaciones de servicio
     }

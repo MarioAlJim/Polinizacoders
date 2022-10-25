@@ -25,7 +25,9 @@ namespace OcaDataAccess
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<People> People { get; set; }
-        public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Friend> Friends { get; set; }
+        public virtual DbSet<Person> People { get; set; }
+        public virtual DbSet<Report> Reports { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace OcaBussinessLogic
     public class UsersAdministration
     {
 
-        public void SignUpUser(string nickname, string password)
+        public Boolean SignUpUser(string nickname, string password)
         {
             Console.WriteLine("*** Add User Starts ***");
 
@@ -20,12 +20,13 @@ namespace OcaBussinessLogic
                 context.Database.Log = Console.WriteLine;
 
                 //Add a new student and address
-                var newStudent = context.Users.Add(new Users() { Nickname = nickname, Password = password });
+                var newStudent = context.Users.Add(new User() { Nickname = nickname, Password = password });
                 context.SaveChanges(); // Executes Insert command
+                Console.WriteLine("*** Add User Succes");
 
             }
 
-            Console.WriteLine("*** AddUpdateDeleteEntityInConnectedScenario Ends ***");
+            return true;
         }
 
 

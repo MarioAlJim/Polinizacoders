@@ -56,6 +56,13 @@
       <Project>{c4d89691-210c-45ab-a61f-f739d8c4432a}</Project>
       <Name>OcaBussinessLogic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OcaDataAccess\OcaDataAccess.csproj">
+      <Project>{8ddf84a0-be7d-43d4-b0ba-3902c9e4eedf}</Project>
+      <Name>OcaDataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
