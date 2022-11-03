@@ -20,11 +20,15 @@ namespace OcaBussinessLogic
                 context.Database.Log = Console.WriteLine;
 
                 //Add a new student and address
-                var newStudent = context.Users.Add(new Users() { Nickname = nickname, Password = password });
+                var newStudent = context.Users.Add(new User() { Nickname = nickname, Password = password });
                 context.SaveChanges(); // Executes Insert command
                 Console.WriteLine("*** Add User Succes");
+
             }
+
             return true;
         }
+
+
     }
 }
