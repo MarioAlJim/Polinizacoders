@@ -1,5 +1,4 @@
 ﻿using OcaDataAccess;
-using System;
 using System.Linq;
 
 namespace OcaBussinessLogic
@@ -10,19 +9,25 @@ namespace OcaBussinessLogic
         {
         }
 
-        public User login(string userName, string password)
+        public Users login(string userName, string password)
         {
-            User users;
-            using (var context = new OcaEntities())
+            Users user = new Users();
+            using (var context = new OcaDBEntities())
             {
-                users = (User)(from Users in context.Users
-                         where Users.Nickname == userName && Users.Password == password
-                         select Users);
+                int userCont = (from Users in context.Users
+                                where Users.Nickname == userName && Users.Password == password
+                                select Users).Count();
+
+                var users = (from Users in context.Users
+                             where Users.Nickname == userName && Users.Password == password
+                             select Users).ToList();
+
+                if (userCont > 0)
+                {
+                    user = users.First();
+                }
             }
-            return users;
+            return user;
         }
-
-
-
     }
 }

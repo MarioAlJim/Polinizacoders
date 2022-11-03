@@ -53,67 +53,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Friend.cs">
-      <DependentUpon>OcaModel.tt</DependentUpon>
+    <Compile Include="Friends.cs">
+      <DependentUpon>OcaGameModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="OcaModel.Context.cs">
+    <Compile Include="OcaGameModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>OcaModel.Context.tt</DependentUpon>
+      <DependentUpon>OcaGameModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="OcaModel.cs">
+    <Compile Include="OcaGameModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>OcaModel.tt</DependentUpon>
+      <DependentUpon>OcaGameModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="OcaModel.Designer.cs">
+    <Compile Include="OcaGameModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>OcaModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Person.cs">
-      <DependentUpon>OcaModel.tt</DependentUpon>
+      <DependentUpon>OcaGameModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Report.cs">
-      <DependentUpon>OcaModel.tt</DependentUpon>
+    <Compile Include="Reports.cs">
+      <DependentUpon>OcaGameModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="User.cs">
-      <DependentUpon>OcaModel.tt</DependentUpon>
+    <Compile Include="Users.cs">
+      <DependentUpon>OcaGameModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="OcaModel.edmx">
+    <EntityDeploy Include="OcaGameModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>OcaModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>OcaGameModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="OcaModel.edmx.diagram">
-      <DependentUpon>OcaModel.edmx</DependentUpon>
+    <None Include="OcaGameModel.edmx.diagram">
+      <DependentUpon>OcaGameModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\Friend.datasource" />
-    <None Include="Properties\DataSources\OcaEntities.datasource" />
-    <None Include="Properties\DataSources\Person.datasource" />
-    <None Include="Properties\DataSources\Report.datasource" />
-    <None Include="Properties\DataSources\User.datasource" />
+    <None Include="Properties\DataSources\Friends.datasource" />
+    <None Include="Properties\DataSources\Reports.datasource" />
+    <None Include="Properties\DataSources\Users.datasource" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="OcaModel.Context.tt">
+    <Content Include="OcaGameModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>OcaModel.edmx</DependentUpon>
-      <LastGenOutput>OcaModel.Context.cs</LastGenOutput>
+      <DependentUpon>OcaGameModel.edmx</DependentUpon>
+      <LastGenOutput>OcaGameModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="OcaModel.tt">
+    <Content Include="OcaGameModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>OcaModel.edmx</DependentUpon>
-      <LastGenOutput>OcaModel.cs</LastGenOutput>
+      <DependentUpon>OcaGameModel.edmx</DependentUpon>
+      <LastGenOutput>OcaGameModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
