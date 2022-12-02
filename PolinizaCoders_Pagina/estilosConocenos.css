@@ -1,0 +1,95 @@
+.carousel,
+.carousel-inner>.item>.img {
+    height: 50;
+}
+
+.carousel-inner img {
+    width: 100%;
+    max-height: 660px;
+}
+
+.carousel-inner {
+    height: 660px;
+}
+
+.navbar {
+    height: 70px;
+}
+
+.navbar-collapse {
+    text-align: center;
+}
+
+.txt {
+    text-align: center;
+}
+
+h2 {
+    color: #FFF;
+    padding: 10px 20px;
+}
+
+.sec {
+    background: #fff;
+    padding: 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec .content {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.mxw800p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.services .box {
+    width: 300px;
+    margin: 0 auto;
+    background: #FFF;
+    padding: 20px;
+    box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.5);
+}
+
+.services .box .iconBx {
+    margin-top: 25px;
+}
+
+.services .box .iconBx img {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+.services .box h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
